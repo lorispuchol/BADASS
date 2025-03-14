@@ -16,4 +16,11 @@ Then use these new images to create the router and the host in GNS3:
 - Drag and drop the router and host to the workspace and rename
 - Click play
 
+Then entrer in the container with teminal:
+
+```bash
+docker ps
+docker exec -it <container_id/name> sh
+```
+
 Reminder for evalution: Don't forget to save before export 
