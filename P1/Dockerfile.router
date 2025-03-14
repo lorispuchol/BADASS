@@ -1,0 +1,6 @@
+FROM quay.io/frrouting/frr:8.4.7
+# RUN cp /etc/frr/vtysh.conf.sample /etc/frr/vtysh.conf
+# ENV DAEMONS="zebra bgpd ospfd isisd"
+RUN apk update && apk add --no-cache busybox
+COPY daemons.conf /etc/frr/daemons
+# RUN chown frr:frr /etc/frr/daemons

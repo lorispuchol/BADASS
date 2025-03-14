@@ -1,0 +1,4 @@
+FROM alpine:latest
+RUN apk update
+RUN apk add --no-cache busybox
+RUN apk add tcpdump vim iputils
