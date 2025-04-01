@@ -14,7 +14,7 @@ __3. Internet__: A global network of networks that connects millions of private,
 
 __4. Router (layer 3: network)__: A device designed to connect and route traffic between different networks
 - Forwards packets between different networks (LAN → WAN, VLAN → VLAN).
-- Most routers pass data between LANs and WANs.
+- Most routers pass data between LANs andz WANs.
 
 __5. Modulator-Demodulator(Modem)__: A device that modulates and demodulates signals to convert digital data into analog signals for transmission over telephone lines (DSL) or cable lines (Cable) or Fiber Optic lines (Fiber).
 - Serves as the bridge between your local network and your ISP
@@ -41,6 +41,12 @@ __9. MAC Address__: A MAC address is a unique hardware identifier assigned to ev
 - Globally unique (in theory, but can be spoofed/changed). Whereas IP addresses are dynamic and assigned by the network administrator
 - ARP (Address Resolution Protocol) Maps IP addresses to MAC addresses (e.g., 192.168.1.10 → 00:1A:2B:3C:4D:5E), Devices use ARP to find each other in a LAN.
 
+> Linux:
+> - `ifconfig` or `ip r` (see the `ether` or `link/ether` field)
+> - `brctl showmacs <bridgename>`
+> - `ip link show type bridge` 
+
+
 __10. Cast__:
 1. Unicast: One-to-One communication
 3. Multicast: One-to-Many communication
@@ -50,5 +56,8 @@ __11. Static cast vs Dynamic cast__:
 - Static cast: fixed set of receivers (e.g., security cameras).
 - Dynamic cast: Many receivers joining/leaving (e.g., live streaming). Uses protocols like IGMP/PIM for automatic group management
 
+__12. Bridge__: A networking device or software component that connects multiple network segments (like Ethernet LANs) at the data link layer (Layer 2) of the OSI model. It forwards traffic between connected interfaces based on MAC addresses (not IP addresses, like a router).
+ - Combines two or more networks into a single logical network
+ - Merge wired & wireless networks (e.g., `eth0` + `wlan0`).
 
 ## Walkthrough
