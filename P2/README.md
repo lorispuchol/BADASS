@@ -14,7 +14,10 @@ __3. Internet__: A global network of networks that connects millions of private,
 
 __4. Router (layer 3: network)__: A device designed to connect and route traffic between different networks
 - Forwards packets between different networks (LAN → WAN, VLAN → VLAN).
-- Most routers pass data between LANs andz WANs.
+- Most routers pass data between LANs andz WANs.  
+
+[See router schema](../routing-diagram.png)
+
 
 __5. Modulator-Demodulator(Modem)__: A device that modulates and demodulates signals to convert digital data into analog signals for transmission over telephone lines (DSL) or cable lines (Cable) or Fiber Optic lines (Fiber).
 - Serves as the bridge between your local network and your ISP
@@ -24,7 +27,11 @@ __6. Switch (layer 2: MAC)__: A device that connects multiple devices (computers
 
 __7. Virtual LAN (VLAN)__: A logically segmented network within a physical LAN that groups devices together (even if they are connected to the same switch)
 - Limits broadcast traffic to only devices within the same VLAN
-- Isolates sensitive departments (e.g., Finance, HR)
+- Isolates sensitive departments (e.g., Finance, HR)  
+
+[See VLAN schema](../VLAN_Concept.svg.png)
+
+
 
 __8. Virtual Extensible LAN (VXLAN)__: A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology  
 | VLAN | VXLAN |
@@ -44,13 +51,16 @@ __9. MAC Address__: A MAC address is a unique hardware identifier assigned to ev
 > Linux:
 > - `ifconfig` or `ip r` (see the `ether` or `link/ether` field)
 > - `brctl showmacs <bridgename>`
-> - `ip link show type bridge` 
+> - `ip link show type bridge`
 
 
 __10. Cast__:
 1. Unicast: One-to-One communication
 3. Multicast: One-to-Many communication
-2. Broadcast: One-to-All communication
+2. Broadcast: One-to-All communication  
+
+[See cast schema](../Screenshot-from-2025-04-01-14-53-03.png)
+
 
 __11. Static cast vs Dynamic cast__:
 - Static cast: fixed set of receivers (e.g., security cameras).
@@ -58,6 +68,9 @@ __11. Static cast vs Dynamic cast__:
 
 __12. Bridge__: A networking device or software component that connects multiple network segments (like Ethernet LANs) at the data link layer (Layer 2) of the OSI model. It forwards traffic between connected interfaces based on MAC addresses (not IP addresses, like a router).
  - Combines two or more networks into a single logical network
- - Merge wired & wireless networks (e.g., `eth0` + `wlan0`).
+ - Merge wired & wireless networks (e.g., `eth0` + `wlan0`).  
+ 
+[See ridge schema](../Network_Bridging.png)
+
 
 ## Walkthrough
