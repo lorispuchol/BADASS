@@ -80,4 +80,7 @@ __12. Bridge (Layer 2: MAC)__: A networking device or software component that co
 
 __13. Segment:__ A logical or physical subdivision of a network where devices can communicate directly without passing through a router.
 
+
+> VTEP—VXLAN= Virtual Tunnel EndPoint
+
 ## Walkthrough
