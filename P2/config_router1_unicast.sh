@@ -37,3 +37,8 @@ ip link set eth1 master br0     # Attach host-facing interface (eth1) to bridge
 ip link set eth1 up
 # ip link set vxlan10 up ### useless ?
 ip link set br0 up
+
+### Check ###
+# ip addr show dev br0
+# bridge fdb show br|macs br0
+# brctl showmacs br0
