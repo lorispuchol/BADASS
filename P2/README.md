@@ -34,13 +34,18 @@ __7. Virtual LAN (VLAN)__: A logically segmented network within a physical LAN t
 
 
 
-__8. Virtual Extensible LAN (VXLAN)__: A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology  
+__8. Virtual Extensible LAN (VXLAN)__: A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology. definition: Virtual eXtensible Local Area Network (VXLAN) is a tunneling protocol that tunnels Ethernet (layer 2) traffic over an IP (layer 3) network.
 | VLAN | VXLAN |
 | --- | --- |
 | Layer 2 (Ethernet)| Layer 2 over Layer 3 (IP/UDP) |
 | 12-bit VID (VLAN ID) | 24-bit VNI (VXLAN Network Identifier) |
 | 4,094 IDs (Insufficient for cloud providers with thousands of tenants) | 16 million segments |
 | Ethernet encapsulation (Layer 2) | MAC-in-UDP encapsulation (layer 3) |
+
+[See cast schema](../overlay-underlay-network.png)  
+https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-virtual-extensible-lan-vxlan
+
+
 
 __9. MAC Address__: A MAC address is a unique hardware identifier assigned to every network interface (Ethernet, Wi-Fi, Bluetooth...) by the manufacturer. It operates at Layer 2 (Data Link Layer) of the OSI model and is essential for communication within a LAN. (IP is layer 3: Network Layer)
 - Format: 6-byte hexadecimal number (e.g., 00:1A:2B:3C:4D:5E)
@@ -81,6 +86,6 @@ __12. Bridge (Layer 2: MAC)__: A networking device or software component that co
 __13. Segment:__ A logical or physical subdivision of a network where devices can communicate directly without passing through a router.
 
 
-> VTEP—VXLAN= Virtual Tunnel EndPoint
+> VTEP—VXLAN= Virtual/VXLAN Tunnel EndPoint
 
 ## Walkthrough

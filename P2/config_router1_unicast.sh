@@ -23,7 +23,8 @@ ip link add vxlan10 type vxlan id 10 dstport 4789 local 10.0.0.1 remote 10.0.0.2
 ip link set vxlan10 up
 
 ### Check ###
-# ip -d link show dev vxlan10
+# ip [-d] link show dev vxlan10
+# ip addr show dev vxlan10
 # ping 10.0.0.2 # when router 2 is configured
 
 ################################
