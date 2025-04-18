@@ -17,10 +17,10 @@ ip link set dev eth0 up
 ##############################
 
 ip link add vxlan10 type vxlan id 10 dstport 4789 local 10.0.0.1 remote 10.0.0.2 dev eth0
+ip link set vxlan10 up
 # remote = Remote VTEP IP
 # local = local VTEP IP
 # Doing this enables unicast communication
-ip link set vxlan10 up
 
 ### Check ###
 # ip [-d] link show dev vxlan10
@@ -36,10 +36,11 @@ ip link set vxlan10 master br0  # Attach VXLAN to bridge
 ip link set eth1 master br0     # Attach host-facing interface (eth1) to bridge
 
 ip link set eth1 up
-# ip link set vxlan10 up ### useless ?
 ip link set br0 up
+# ip link set vxlan10 up ### useless ?
 
 ### Check ###
+# ifconfig
 # ip addr show dev br0
 # bridge fdb show br|macs br0
 # brctl showmacs br0

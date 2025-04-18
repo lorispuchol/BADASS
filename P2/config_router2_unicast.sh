@@ -17,29 +17,48 @@ ip link set dev eth0 up
 ##############################
 
 ip link add vxlan10 type vxlan id 10 dstport 4789 local 10.0.0.2 remote 10.0.0.1 dev eth0
+ip link set vxlan10 up
 # remote = Remote VTEP IP
 # local = local VTEP IP
 # Doing this enables unicast communication
-ip link set vxlan10 up
 
 ### Check ###
 # ip link show dev vxlan10
 # ip addr show dev vxlan10
 # ping 10.0.0.1 # when router 1 is configured
 
+
+# New 
+ip addr add 20.1.1.2/24 dev vxlan10
+
 ################################
-### Create and set up bridge ###
+### Create bridge ###
 ################################
 
 ip link add br0 type bridge
+ip link set br0 up
+
+########################################
+### Set up bridge linking interfaces ###
+########################################
+
+
 ip link set vxlan10 master br0  # Attach VXLAN to bridge
 ip link set eth1 master br0     # Attach host-facing interface (eth1) to bridge
 
 ip link set eth1 up
-# ip link set vxlan10 up ### Maybe no
 ip link set br0 up
 
+# New 
+##### utiliser ca la place et changer la conf pour les dynamic (group) egalement
+brctl addif br0 eth1
+brctl addif br0 vxlan10
+
+
+# ip link set vxlan10 up ### Maybe no
+
 ### Check ###
+# ifconfig
 # ip addr show dev br0
 # bridge fdb show br|macs br0
 # brctl showmacs br0

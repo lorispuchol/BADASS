@@ -3,10 +3,10 @@ ip link del vxlan10
 
 # Recreate VXLAN with multicast
 ip link add vxlan10 type vxlan id 10 dstport 4789 group 239.1.1.1 dev eth0 # Multicast group for dynamic discovery
+ip link set vxlan10 up
 
 # Reattach to br0
 ip link set vxlan10 master br0
-ip link set vxlan10 up
 
 ### Check ###
 # ifconfig
