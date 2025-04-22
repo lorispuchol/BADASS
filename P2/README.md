@@ -16,7 +16,7 @@ __4. Router (Layer 3: Network)__: A device designed to connect and route traffic
 - Forwards packets between different networks (LAN → WAN, VLAN → VLAN).
 - Most routers pass data between LANs and WANs.
 
-[See router schema](../routing-diagram.png)
+[See router schema](../routing-diagram.jpeg)
 
 
 __5. Modulator-Demodulator(Modem)__: A device that modulates and demodulates signals to convert digital data into analog signals for transmission over telephone lines (DSL) or cable lines (Cable) or Fiber Optic lines (Fiber).
@@ -30,9 +30,9 @@ __7. Virtual LAN (VLAN)__: A logically segmented network within a physical LAN t
 - Limits broadcast traffic to only devices within the same VLAN
 - Isolates sensitive departments (e.g., Finance, HR)  
 
-[See VLAN schema](../VLAN_Concept.svg.png)
-
-
+[See VLAN schema](../VLAN_Concept.svg.png)  
+(cf. https://www.fs.com/blog/differences-between-router-and-switch-14729.html)  
+(cf. https://www.fs.com/blog/differences-between-router-and-switch-14729.html)
 
 __8. Virtual Extensible LAN (VXLAN)__: A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology. definition: Virtual eXtensible Local Area Network (VXLAN) is a tunneling protocol that tunnels Ethernet (layer 2) traffic over an IP (layer 3) network.
 | VLAN | VXLAN |

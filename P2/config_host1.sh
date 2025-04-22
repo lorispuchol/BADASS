@@ -6,4 +6,4 @@ ip link set eth1 up
 # ip link show dev eth1
 # ifconfig
 
-# `del` to revert
+### replace 'add' with 'del' to revert
