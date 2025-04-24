@@ -42,7 +42,7 @@ A logically segmented network within a physical LAN that groups devices together
 (cf. https://www.fs.com/blog/differences-between-router-and-switch-14729.html)
 
 ### Virtual Extensible LAN (VXLAN)
-A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology. definition: Virtual eXtensible Local Area Network (VXLAN) is a tunneling protocol that tunnels Ethernet (layer 2) traffic over an IP (layer 3) network.
+A network virtualization technology consider as next-generation of VLAN. But not only that, it is fundamentally a different technology. definition: Virtual eXtensible Local Area Network (VXLAN) is a tunneling protocol that tunnels Ethernet (layer 2) traffic over an IP (layer 3) network. It allows a single physical network to be shared by multiple different organizations, or “tenants,” without any one tenant being able to see the network traffic of any other
 | VLAN | VXLAN |
 | --- | --- |
 | Layer 2 (Ethernet)| Layer 2 over Layer 3 (IP/UDP) |
@@ -96,7 +96,7 @@ A networking device or software component that connects multiple network segment
 ### Segment
 A logical or physical subdivision of a network where devices can communicate directly without passing through a router.
 
-
-> VTEP—VXLAN= Virtual/VXLAN Tunnel EndPoint
+### VXLAN Tunnel EndPoint (VTEP)
+A device or software component that encapsulates and decapsulates VXLAN packets, allowing communication between different VXLAN segments. It acts as the entry and exit point for VXLAN traffic, enabling Layer 2 connectivity over a Layer 3 network.
 
 ## Walkthrough
