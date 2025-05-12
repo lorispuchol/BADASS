@@ -30,8 +30,8 @@ ip link set vxlan10 up
 # ping 10.0.0.2 # when router 2 is configured
 
 # New 
-ip addr add 20.1.1.1/24 dev vxlan10
-ip link set vxlan10 up
+# ip addr add 20.1.1.1/24 dev vxlan10
+# ip link set vxlan10 up
 
 #####################
 ### Create bridge ###
@@ -60,11 +60,10 @@ ip link set eth1 up
 ip link set vxlan10 up
 ip link set br0 up
 
-### Check ###
-# ifconfig
-# ip addr show dev br0
-# bridge fdb show br|macs br0
-# brctl showmacs br0
+# New 
+##### utiliser ca la place et changer la conf pour les dynamic (group) egalement ?
+# brctl addif br0 eth1
+# brctl addif br0 vxlan10
 
 ### UP all ###
 # ip link set eth0 up
