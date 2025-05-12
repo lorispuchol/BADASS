@@ -70,3 +70,9 @@ bridge is a virtual switch.
 what is broadcast / gateway ?
 how it knows it should go on the vxlan ?
 Linux use the routing table to decide in wich interface to send the packet
+
+
+https://www.techtarget.com/searchnetworking/tip/VXLAN-vs-VLAN-Whats-the-difference
+
+Ethernet frame: ( layer 2 of osi model)
+VXLAN transform Ethernet fram into UDP, layer3 fram

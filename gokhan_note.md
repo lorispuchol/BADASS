@@ -101,7 +101,8 @@ Dynamic relations:
 Leafs techno leaf and spine. -> permit a better communication beetween ouest and est.
 ECMP (Equal-Cost Multipath)
 
-loopback in network :
+loopback in network : ?
+what is the purpose of that ?
 
 setup bgp.
 
@@ -238,3 +239,6 @@ Absolutely! Here's your complete VXLAN EVPN lab configuration with:
 🔧 OSPF underlay, BGP EVPN, VXLAN with VNI 100
 
 
+⚙️ GENERAL SETUP PER ROUTER
+
+Workflow : ->
