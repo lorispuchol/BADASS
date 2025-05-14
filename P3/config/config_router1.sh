@@ -1,4 +1,4 @@
-# LOOPBACK (used for VTEP and BGP Router-ID)
+# Interface config
 ip addr add 1.1.1.1/32 dev lo
 ip link set lo up
 
@@ -10,13 +10,18 @@ ip link set eth0 up
 ip link set eth1 up
 ip link set eth2 up
 
+# Start FRR (only needed if not done via entrypoint)
+
+# FRR config
 vtysh << EOF
+configure terminal
 router ospf
  network 10.1.1.0/24 area 0
  network 1.1.1.0/24 area 0
 
 router bgp 65000
  bgp router-id 1.1.1.1
+
  neighbor 1.1.1.2 remote-as 65000
  neighbor 1.1.1.2 update-source lo
 
@@ -34,5 +39,5 @@ router bgp 65000
   neighbor 1.1.1.2 route-reflector-client
   neighbor 1.1.1.3 route-reflector-client
   neighbor 1.1.1.4 route-reflector-client
- exit-address-familyt
+ exit-address-family
 EOF
